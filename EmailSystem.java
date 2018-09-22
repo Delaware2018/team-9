@@ -1,10 +1,13 @@
 import java.util.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.io.*;
 
 public class EmailSystem{
 
     public static void main(String[] args){
-        String csvFile = "/home/andrea/CodeForGood/team-9"; // name of csv
+        String csvFile = "/home/andrea/CodeForGood/Sample_data.csv"; // name of csv
         String line = ""; //each line being read
         Map<String,String> cohorts = new HashMap<>();
 
@@ -16,11 +19,17 @@ public class EmailSystem{
                 String email = donor[3];
                 
                 cohorts.put(zip, email);
+                System.out.println(zip);
     
             }
         }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
         System.out.println(cohorts);
     }
+
 
 }
 
