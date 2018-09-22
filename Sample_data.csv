@@ -1,0 +1,5 @@
+Customer_ID,F_Name,L_Name,Email_Adr,Phone_Num,Gender,University,Age,Num_Donation,Donation_Amt,Is_Donor,zip
+123,Marry,Lollar,juliano@att.net,(839) 615-4980,Female,University of Delaware,60,1,155,1,07032
+124,Katina,Minto,jonathan@live.com,(892) 307-2264,Female,Penn State,50,4,165,0,07033
+125,Oliva,Galati,gomor@comcast.net,(448) 909-5786,Female,University of Delaware,69,2,14,1,11201
+126,Adaline,Cianci,psharpe@gmail.com,(640) 714-4780,Female,University of Delaware,37,3,187,0,07032
