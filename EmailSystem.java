@@ -4,6 +4,23 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.*;
 
+
+public class Person{
+    private String name;
+    private String emailAddr;
+    private String phoneNum;
+    private String university;
+
+
+    public Person(String name1, String emailAddr1, String phoneNum1, String university1){
+        this.name = name1;
+        this.emailAddr = emailAddr1;
+        this.phoneNum = phoneNum1;
+        this.university = university1;
+    }
+
+
+}
 public class EmailSystem{
 
     public static void main(String[] args){
@@ -28,7 +45,7 @@ public class EmailSystem{
                 else{ 
                 emailList.add(email);
                 cohorts.put(zip, emailList);
-                System.out.println(zip);
+                
                 }
             }
         }
