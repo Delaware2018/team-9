@@ -19,6 +19,25 @@ public class Person{
         this.university = university1;
     }
 
+    public String getName(){
+        return name;
+    }
+
+    public String getEmail(){
+        return emailAddr;
+    }
+    
+    public String getPhoneNum(){
+        return phoneNum;
+    }
+    
+    public String getUniversity(){
+        return university;
+    }
+
+    public void printInfo(){
+        System.out.println("Name: " + name + "\nEmail: " + emailAddr + "\nPhone Number: " +  phoneNum + "\nUniversity: ");
+    }
 
 }
 public class EmailSystem{
