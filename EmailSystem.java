@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.*;
 
 
-public class Person{
+class Person{
     private String name;
     private String emailAddr;
     private String phoneNum;
@@ -43,9 +43,9 @@ public class Person{
 public class EmailSystem{
 
     public static void main(String[] args){
-        String csvFile = "/home/andrea/CodeForGood/Sample_data.csv"; // name of csv
+        String csvFile = "/home/andrea/CodeForGood/team-9/Sample_data.csv"; // name of csv
         String line = ""; //each line being read
-        Map<String,ArrayList<String>> cohorts = new HashMap<>();
+        Map<String,ArrayList<Person>> cohorts = new HashMap<>();
 
         try(BufferedReader br = new BufferedReader(new FileReader(csvFile))){
             String first_line = br.readLine();
@@ -54,15 +54,19 @@ public class EmailSystem{
                 String [] donor = line.split(","); //puts it into an array
                 String zip = donor[11]; // zipcode location
                 String email = donor[3];
-                ArrayList<String> emailList = new ArrayList<String>();
+                String name = donor[1] + donor[2];
+                String phone = donor[4];
+                String uni = donor[6];
+
+                ArrayList<Person> emailList = new ArrayList<Person>();
                 
                 if (cohorts.containsKey(zip)){
-                    ArrayList<String> copyEmails = cohorts.get(zip);
-                    copyEmails.add(email);
+                    ArrayList<Person> copyEmails = cohorts.get(zip);
+                    copyEmails.add(new Person(name, email, phone, uni));
                     cohorts.put(zip, copyEmails);
                 }
                 else{ 
-                emailList.add(email);
+                emailList.add(new Person(name, email, phone, uni));
                 cohorts.put(zip, emailList);
                 
                 }
